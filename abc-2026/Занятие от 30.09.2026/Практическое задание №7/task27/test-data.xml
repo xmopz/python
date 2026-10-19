@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="9" failures="0" skipped="56" tests="65" time="46.066" timestamp="2026-10-18T18:18:12.165643+03:00" hostname="gigabyte"><testcase classname="" name="tests.apply.test_invalid_arg" time="0.000"><error message="collection failure">.venv\Lib\site-packages\pluggy\_caller.py:197: in __call__
+    return self._hookexec(
+.venv\Lib\site-packages\pluggy\_manager.py:183: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\_pytest\python.py:250: in pytest_pycollect_makeitem
+    return list(collector._genfunctions(name, obj))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\_pytest\python.py:476: in _genfunctions
+    self.ihook.pytest_generate_tests.call_extra(methods, dict(metafunc=metafunc))
+.venv\Lib\site-packages\pluggy\_caller.py:262: in call_extra
+    return self._hookexec(self.name, hookimpls, kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\pluggy\_manager.py:183: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\_pytest\python.py:124: in pytest_generate_tests
+    metafunc.parametrize(*marker.args, **marker.kwargs, _param_mark=marker)
+.venv\Lib\site-packages\_pytest\python.py:1316: in parametrize
+    argnames, parametersets = ParameterSet._for_parametrize(
+.venv\Lib\site-packages\_pytest\mark\structures.py:202: in _for_parametrize
+    warnings.warn(
+E   pytest.PytestRemovedIn10Warning: Passing a non-Collection iterable to parametrize is deprecated.
+E   Test: tests/apply/test_invalid_arg.py::test_agg_cython_table_raises_series, argvalues type: chain
+E   Please convert to a list or tuple.
+E   See https://docs.pytest.org/en/stable/deprecations.html#parametrize-iterators</error></testcase><testcase classname="" name="tests.apply.test_numba" time="0.000"><skipped message="collection skipped">('C:\\Users\\araba\\OneDrive\\Documents\\DZ\\python\\abc-2026\\Занятие от 30.09.2026\\Практическое задание №7\\task27\\.venv\\Lib\\site-packages\\pandas\\tests\\apply\\test_numba.py', 17, "Skipped: could not import 'numba': No module named 'numba'")</skipped></testcase><testcase classname="" name="tests.apply.test_str" time="0.000"><error message="collection failure">.venv\Lib\site-packages\pluggy\_caller.py:197: in __call__
+    return self._hookexec(
+.venv\Lib\site-packages\pluggy\_manager.py:183: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\_pytest\python.py:250: in pytest_pycollect_makeitem
+    return list(collector._genfunctions(name, obj))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\_pytest\python.py:476: in _genfunctions
+    self.ihook.pytest_generate_tests.call_extra(methods, dict(metafunc=metafunc))
+.venv\Lib\site-packages\pluggy\_caller.py:262: in call_extra
+    return self._hookexec(self.name, hookimpls, kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\pluggy\_manager.py:183: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\_pytest\python.py:124: in pytest_generate_tests
+    metafunc.parametrize(*marker.args, **marker.kwargs, _param_mark=marker)
+.venv\Lib\site-packages\_pytest\python.py:1316: in parametrize
+    argnames, parametersets = ParameterSet._for_parametrize(
+.venv\Lib\site-packages\_pytest\mark\structures.py:202: in _for_parametrize
+    warnings.warn(
+E   pytest.PytestRemovedIn10Warning: Passing a non-Collection iterable to parametrize is deprecated.
+E   Test: tests/apply/test_str.py::test_agg_cython_table_series, argvalues type: chain
+E   Please convert to a list or tuple.
+E   See https://docs.pytest.org/en/stable/deprecations.html#parametrize-iterators</error></testcase><testcase classname="" name="tests.arrays.masked.test_arrow_compat" time="0.000"><skipped message="collection skipped">('C:\\Users\\araba\\OneDrive\\Documents\\DZ\\python\\abc-2026\\Занятие от 30.09.2026\\Практическое задание №7\\task27\\.venv\\Lib\\site-packages\\pandas\\tests\\arrays\\masked\\test_arrow_compat.py', 12, "Skipped: could not import 'pyarrow': No module named 'pyarrow'")</skipped></testcase><testcase classname="" name="tests.arrays.period.test_arrow_compat" time="0.000"><skipped message="collection skipped">('C:\\Users\\araba\\OneDrive\\Documents\\DZ\\python\\abc-2026\\Занятие от 30.09.2026\\Практическое задание №7\\task27\\.venv\\Lib\\site-packages\\pandas\\tests\\arrays\\period\\test_arrow_compat.py', 17, "Skipped: could not import 'pyarrow': No module named 'pyarrow'")</skipped></testcase><testcase classname="" name="tests.extension.test_arrow" time="0.000"><skipped message="collection skipped">('C:\\Users\\araba\\OneDrive\\Documents\\DZ\\python\\abc-2026\\Занятие от 30.09.2026\\Практическое задание №7\\task27\\.venv\\Lib\\site-packages\\pandas\\tests\\extension\\test_arrow.py', 70, "Skipped: could not import 'pyarrow': No module named 'pyarrow'")</skipped></testcase><testcase classname="" name="tests.frame.test_arrow_interface" time="0.000"><skipped message="collection skipped">('C:\\Users\\araba\\OneDrive\\Documents\\DZ\\python\\abc-2026\\Занятие от 30.09.2026\\Практическое задание №7\\task27\\.venv\\Lib\\site-packages\\pandas\\tests\\frame\\test_arrow_interface.py', 11, "Skipped: could not import 'pyarrow': No module named 'pyarrow'")</skipped></testcase><testcase classname="tests.frame.test_stack_unstack" name="TestDataFrameReshape" time="0.000"><error message="collection failure">.venv\Lib\site-packages\pluggy\_caller.py:197: in __call__
+    return self._hookexec(
+.venv\Lib\site-packages\pluggy\_manager.py:183: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\_pytest\python.py:250: in pytest_pycollect_makeitem
+    return list(collector._genfunctions(name, obj))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\_pytest\python.py:476: in _genfunctions
+    self.ihook.pytest_generate_tests.call_extra(methods, dict(metafunc=metafunc))
+.venv\Lib\site-packages\pluggy\_caller.py:262: in call_extra
+    return self._hookexec(self.name, hookimpls, kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\pluggy\_manager.py:183: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\_pytest\python.py:124: in pytest_generate_tests
+    metafunc.parametrize(*marker.args, **marker.kwargs, _param_mark=marker)
+.venv\Lib\site-packages\_pytest\python.py:1316: in parametrize
+    argnames, parametersets = ParameterSet._for_parametrize(
+.venv\Lib\site-packages\_pytest\mark\structures.py:202: in _for_parametrize
+    warnings.warn(
+E   pytest.PytestRemovedIn10Warning: Passing a non-Collection iterable to parametrize is deprecated.
+E   Test: tests/frame/test_stack_unstack.py::TestDataFrameReshape::test_unstack_nan_index_repeats, argvalues type: permutations
+E   Please convert to a list or tuple.
+E   See https://docs.pytest.org/en/stable/deprecations.html#parametrize-iterators</error></testcase><testcase classname="tests.frame.test_stack_unstack" name="TestStackUnstackMultiLevel" time="0.000"><error message="collection failure">.venv\Lib\site-packages\pluggy\_caller.py:197: in __call__
+    return self._hookexec(
+.venv\Lib\site-packages\pluggy\_manager.py:183: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\_pytest\python.py:250: in pytest_pycollect_makeitem
+    return list(collector._genfunctions(name, obj))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\_pytest\python.py:476: in _genfunctions
+    self.ihook.pytest_generate_tests.call_extra(methods, dict(metafunc=metafunc))
+.venv\Lib\site-packages\pluggy\_caller.py:262: in call_extra
+    return self._hookexec(self.name, hookimpls, kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\pluggy\_manager.py:183: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\_pytest\python.py:124: in pytest_generate_tests
+    metafunc.parametrize(*marker.args, **marker.kwargs, _param_mark=marker)
+.venv\Lib\site-packages\_pytest\python.py:1316: in parametrize
+    argnames, parametersets = ParameterSet._for_parametrize(
+.venv\Lib\site-packages\_pytest\mark\structures.py:202: in _for_parametrize
+    warnings.warn(
+E   pytest.PytestRemovedIn10Warning: Passing a non-Collection iterable to parametrize is deprecated.
+E   Test: tests/frame/test_stack_unstack.py::TestStackUnstackMultiLevel::test_stack_order_with_unsorted_levels, argvalues type: chain
+E   Please convert to a list or tuple.
+E   See https://docs.pytest.org/en/stable/deprecations.html#parametrize-iterators</error></testcase><testcase classname="" name="tests.generic.test_to_xarray" time="0.000"><skipped message="collection skipped">('C:\\Users\\araba\\OneDrive\\Documents\\DZ\\python\\abc-2026\\Занятие от 30.09.2026\\Практическое задание №7\\task27\\.venv\\Lib\\site-packages\\pandas\\tests\\generic\\test_to_xarray.py', 14, "Skipped: could not import 'xarray': No module named 'xarray'")</skipped></testcase><testcase classname="" name="tests.groupby.aggregate.test_numba" time="0.000"><skipped message="collection skipped">('C:\\Users\\araba\\OneDrive\\Documents\\DZ\\python\\abc-2026\\Занятие от 30.09.2026\\Практическое задание №7\\task27\\.venv\\Lib\\site-packages\\pandas\\tests\\groupby\\aggregate\\test_numba.py', 19, "Skipped: could not import 'numba': No module named 'numba'")</skipped></testcase><testcase classname="" name="tests.groupby.test_numba" time="0.000"><skipped message="collection skipped">('C:\\Users\\araba\\OneDrive\\Documents\\DZ\\python\\abc-2026\\Занятие от 30.09.2026\\Практическое задание №7\\task27\\.venv\\Lib\\site-packages\\pandas\\tests\\groupby\\test_numba.py', 15, "Skipped: could not import 'numba': No module named 'numba'")</skipped></testcase><testcase classname="" name="tests.groupby.transform.test_numba" time="0.000"><skipped message="collection skipped">('C:\\Users\\araba\\OneDrive\\Documents\\DZ\\python\\abc-2026\\Занятие от 30.09.2026\\Практическое задание №7\\task27\\.venv\\Lib\\site-packages\\pandas\\tests\\groupby\\transform\\test_numba.py', 17, "Skipped: could not import 'numba': No module named 'numba'")</skipped></testcase><testcase classname="tests.indexes.interval.test_interval" name="TestIntervalIndex" time="0.000"><error message="collection failure">.venv\Lib\site-packages\pluggy\_caller.py:197: in __call__
+    return self._hookexec(
+.venv\Lib\site-packages\pluggy\_manager.py:183: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\_pytest\python.py:250: in pytest_pycollect_makeitem
+    return list(collector._genfunctions(name, obj))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\_pytest\python.py:476: in _genfunctions
+    self.ihook.pytest_generate_tests.call_extra(methods, dict(metafunc=metafunc))
+.venv\Lib\site-packages\pluggy\_caller.py:262: in call_extra
+    return self._hookexec(self.name, hookimpls, kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\pluggy\_manager.py:183: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\_pytest\python.py:124: in pytest_generate_tests
+    metafunc.parametrize(*marker.args, **marker.kwargs, _param_mark=marker)
+.venv\Lib\site-packages\_pytest\python.py:1316: in parametrize
+    argnames, parametersets = ParameterSet._for_parametrize(
+.venv\Lib\site-packages\_pytest\mark\structures.py:202: in _for_parametrize
+    warnings.warn(
+E   pytest.PytestRemovedIn10Warning: Passing a non-Collection iterable to parametrize is deprecated.
+E   Test: tests/indexes/interval/test_interval.py::TestIntervalIndex::test_maybe_convert_i8_errors, argvalues type: permutations
+E   Please convert to a list or tuple.
+E   See https://docs.pytest.org/en/stable/deprecations.html#parametrize-iterators</error></testcase><testcase classname="tests.indexes.interval.test_interval_tree" name="TestIntervalTree" time="0.000"><error message="collection failure">.venv\Lib\site-packages\pluggy\_caller.py:197: in __call__
+    return self._hookexec(
+.venv\Lib\site-packages\pluggy\_manager.py:183: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\_pytest\python.py:250: in pytest_pycollect_makeitem
+    return list(collector._genfunctions(name, obj))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\_pytest\python.py:476: in _genfunctions
+    self.ihook.pytest_generate_tests.call_extra(methods, dict(metafunc=metafunc))
+.venv\Lib\site-packages\pluggy\_caller.py:262: in call_extra
+    return self._hookexec(self.name, hookimpls, kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\pluggy\_manager.py:183: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\_pytest\python.py:124: in pytest_generate_tests
+    metafunc.parametrize(*marker.args, **marker.kwargs, _param_mark=marker)
+.venv\Lib\site-packages\_pytest\python.py:1316: in parametrize
+    argnames, parametersets = ParameterSet._for_parametrize(
+.venv\Lib\site-packages\_pytest\mark\structures.py:202: in _for_parametrize
+    warnings.warn(
+E   pytest.PytestRemovedIn10Warning: Passing a non-Collection iterable to parametrize is deprecated.
+E   Test: tests/indexes/interval/test_interval_tree.py::TestIntervalTree::test_is_overlapping, argvalues type: generator
+E   Please convert to a list or tuple.
+E   See https://docs.pytest.org/en/stable/deprecations.html#parametrize-iterators</error></testcase><testcase classname="" name="tests.io.excel.test_odf" time="0.000"><skipped message="collection skipped">('C:\\Users\\araba\\OneDrive\\Documents\\DZ\\python\\abc-2026\\Занятие от 30.09.2026\\Практическое задание №7\\task27\\.venv\\Lib\\site-packages\\pandas\\tests\\io\\excel\\test_odf.py', 9, "Skipped: could not import 'odf': No module named 'odf'")</skipped></testcase><testcase classname="" name="tests.io.excel.test_odswriter" time="0.000"><skipped message="collection skipped">('C:\\Users\\araba\\OneDrive\\Documents\\DZ\\python\\abc-2026\\Занятие от 30.09.2026\\Практическое задание №7\\task27\\.venv\\Lib\\site-packages\\pandas\\tests\\io\\excel\\test_odswriter.py', 14, "Skipped: could not import 'odf': No module named 'odf'")</skipped></testcase><testcase classname="" name="tests.io.excel.test_openpyxl" time="0.000"><skipped message="collection skipped">('C:\\Users\\araba\\OneDrive\\Documents\\DZ\\python\\abc-2026\\Занятие от 30.09.2026\\Практическое задание №7\\task27\\.venv\\Lib\\site-packages\\pandas\\tests\\io\\excel\\test_openpyxl.py', 19, "Skipped: could not import 'openpyxl': No module named 'openpyxl'")</skipped></testcase><testcase classname="" name="tests.io.excel.test_style" time="0.000"><skipped message="collection skipped">('C:\\Users\\araba\\OneDrive\\Documents\\DZ\\python\\abc-2026\\Занятие от 30.09.2026\\Практическое задание №7\\task27\\.venv\\Lib\\site-packages\\pandas\\tests\\io\\excel\\test_style.py', 21, "Skipped: could not import 'jinja2': No module named 'jinja2'")</skipped></testcase><testcase classname="" name="tests.io.excel.test_xlrd" time="0.000"><skipped message="collection skipped">('C:\\Users\\araba\\OneDrive\\Documents\\DZ\\python\\abc-2026\\Занятие от 30.09.2026\\Практическое задание №7\\task27\\.venv\\Lib\\site-packages\\pandas\\tests\\io\\excel\\test_xlrd.py', 12, "Skipped: could not import 'xlrd': No module named 'xlrd'")</skipped></testcase><testcase classname="" name="tests.io.excel.test_xlsxwriter" time="0.000"><skipped message="collection skipped">('C:\\Users\\araba\\OneDrive\\Documents\\DZ\\python\\abc-2026\\Занятие от 30.09.2026\\Практическое задание №7\\task27\\.venv\\Lib\\site-packages\\pandas\\tests\\io\\excel\\test_xlsxwriter.py', 10, "Skipped: could not import 'xlsxwriter': No module named 'xlsxwriter'")</skipped></testcase><testcase classname="" name="tests.io.formats.style.test_bar" time="0.000"><skipped message="collection skipped">('C:\\Users\\araba\\OneDrive\\Documents\\DZ\\python\\abc-2026\\Занятие от 30.09.2026\\Практическое задание №7\\task27\\.venv\\Lib\\site-packages\\pandas\\tests\\io\\formats\\style\\test_bar.py', 12, "Skipped: could not import 'jinja2': No module named 'jinja2'")</skipped></testcase><testcase classname="" name="tests.io.formats.style.test_exceptions" time="0.000"><skipped message="collection skipped">('C:\\Users\\araba\\OneDrive\\Documents\\DZ\\python\\abc-2026\\Занятие от 30.09.2026\\Практическое задание №7\\task27\\.venv\\Lib\\site-packages\\pandas\\tests\\io\\formats\\style\\test_exceptions.py', 3, "Skipped: could not import 'jinja2': No module named 'jinja2'")</skipped></testcase><testcase classname="" name="tests.io.formats.style.test_format" time="0.000"><skipped message="collection skipped">('C:\\Users\\araba\\OneDrive\\Documents\\DZ\\python\\abc-2026\\Занятие от 30.09.2026\\Практическое задание №7\\task27\\.venv\\Lib\\site-packages\\pandas\\tests\\io\\formats\\style\\test_format.py', 14, "Skipped: could not import 'jinja2': No module named 'jinja2'")</skipped></testcase><testcase classname="" name="tests.io.formats.style.test_highlight" time="0.000"><skipped message="collection skipped">('C:\\Users\\araba\\OneDrive\\Documents\\DZ\\python\\abc-2026\\Занятие от 30.09.2026\\Практическое задание №7\\task27\\.venv\\Lib\\site-packages\\pandas\\tests\\io\\formats\\style\\test_highlight.py', 10, "Skipped: could not import 'jinja2': No module named 'jinja2'")</skipped></testcase><testcase classname="" name="tests.io.formats.style.test_html" time="0.000"><skipped message="collection skipped">('C:\\Users\\araba\\OneDrive\\Documents\\DZ\\python\\abc-2026\\Занятие от 30.09.2026\\Практическое задание №7\\task27\\.venv\\Lib\\site-packages\\pandas\\tests\\io\\formats\\style\\test_html.py', 16, "Skipped: could not import 'jinja2': No module named 'jinja2'")</skipped></testcase><testcase classname="" name="tests.io.formats.style.test_matplotlib" time="0.000"><skipped message="collection skipped">('C:\\Users\\araba\\OneDrive\\Documents\\DZ\\python\\abc-2026\\Занятие от 30.09.2026\\Практическое задание №7\\task27\\.venv\\Lib\\site-packages\\pandas\\tests\\io\\formats\\style\\test_matplotlib.py', 10, "Skipped: could not import 'matplotlib': No module named 'matplotlib'")</skipped></testcase><testcase classname="" name="tests.io.formats.style.test_non_unique" time="0.000"><skipped message="collection skipped">('C:\\Users\\araba\\OneDrive\\Documents\\DZ\\python\\abc-2026\\Занятие от 30.09.2026\\Практическое задание №7\\task27\\.venv\\Lib\\site-packages\\pandas\\tests\\io\\formats\\style\\test_non_unique.py', 10, "Skipped: could not import 'jinja2': No module named 'jinja2'")</skipped></testcase><testcase classname="" name="tests.io.formats.style.test_style" time="0.000"><skipped message="collection skipped">('C:\\Users\\araba\\OneDrive\\Documents\\DZ\\python\\abc-2026\\Занятие от 30.09.2026\\Практическое задание №7\\task27\\.venv\\Lib\\site-packages\\pandas\\tests\\io\\formats\\style\\test_style.py', 18, "Skipped: could not import 'jinja2': No module named 'jinja2'")</skipped></testcase><testcase classname="" name="tests.io.formats.style.test_to_latex" time="0.000"><skipped message="collection skipped">('C:\\Users\\araba\\OneDrive\\Documents\\DZ\\python\\abc-2026\\Занятие от 30.09.2026\\Практическое задание №7\\task27\\.venv\\Lib\\site-packages\\pandas\\tests\\io\\formats\\style\\test_to_latex.py', 13, "Skipped: could not import 'jinja2': No module named 'jinja2'")</skipped></testcase><testcase classname="" name="tests.io.formats.style.test_to_string" time="0.000"><skipped message="collection skipped">('C:\\Users\\araba\\OneDrive\\Documents\\DZ\\python\\abc-2026\\Занятие от 30.09.2026\\Практическое задание №7\\task27\\.venv\\Lib\\site-packages\\pandas\\tests\\io\\formats\\style\\test_to_string.py', 10, "Skipped: could not import 'jinja2': No module named 'jinja2'")</skipped></testcase><testcase classname="" name="tests.io.formats.style.test_to_typst" time="0.000"><skipped message="collection skipped">('C:\\Users\\araba\\OneDrive\\Documents\\DZ\\python\\abc-2026\\Занятие от 30.09.2026\\Практическое задание №7\\task27\\.venv\\Lib\\site-packages\\pandas\\tests\\io\\formats\\style\\test_to_typst.py', 10, "Skipped: could not import 'jinja2': No module named 'jinja2'")</skipped></testcase><testcase classname="" name="tests.io.formats.style.test_tooltip" time="0.000"><skipped message="collection skipped">('C:\\Users\\araba\\OneDrive\\Documents\\DZ\\python\\abc-2026\\Занятие от 30.09.2026\\Практическое задание №7\\task27\\.venv\\Lib\\site-packages\\pandas\\tests\\io\\formats\\style\\test_tooltip.py', 9, "Skipped: could not import 'jinja2': No module named 'jinja2'")</skipped></testcase><testcase classname="" name="tests.io.formats.test_to_latex" time="0.000"><skipped message="collection skipped">('C:\\Users\\araba\\OneDrive\\Documents\\DZ\\python\\abc-2026\\Занятие от 30.09.2026\\Практическое задание №7\\task27\\.venv\\Lib\\site-packages\\pandas\\tests\\io\\formats\\test_to_latex.py', 12, "Skipped: could not import 'jinja2': No module named 'jinja2'")</skipped></testcase><testcase classname="" name="tests.io.formats.test_to_markdown" time="0.000"><skipped message="collection skipped">('C:\\Users\\araba\\OneDrive\\Documents\\DZ\\python\\abc-2026\\Занятие от 30.09.2026\\Практическое задание №7\\task27\\.venv\\Lib\\site-packages\\pandas\\tests\\io\\formats\\test_to_markdown.py', 10, "Skipped: could not import 'tabulate': No module named 'tabulate'")</skipped></testcase><testcase classname="" name="tests.io.pytables" time="0.000"><skipped message="collection skipped">('C:\\Users\\araba\\OneDrive\\Documents\\DZ\\python\\abc-2026\\Занятие от 30.09.2026\\Практическое задание №7\\task27\\.venv\\Lib\\site-packages\\pandas\\tests\\io\\pytables\\conftest.py', 7, "Skipped: could not import 'tables': No module named 'tables'")</skipped></testcase><testcase classname="" name="tests.io.test_feather" time="0.000"><skipped message="collection skipped">('C:\\Users\\araba\\OneDrive\\Documents\\DZ\\python\\abc-2026\\Занятие от 30.09.2026\\Практическое задание №7\\task27\\.venv\\Lib\\site-packages\\pandas\\tests\\io\\test_feather.py', 25, "Skipped: could not import 'pyarrow': No module named 'pyarrow'")</skipped></testcase><testcase classname="" name="tests.io.test_iceberg" time="0.000"><skipped message="collection skipped">('C:\\Users\\araba\\OneDrive\\Documents\\DZ\\python\\abc-2026\\Занятие от 30.09.2026\\Практическое задание №7\\task27\\.venv\\Lib\\site-packages\\pandas\\tests\\io\\test_iceberg.py', 21, "Skipped: could not import 'pyiceberg': No module named 'pyiceberg'")</skipped></testcase><testcase classname="" name="tests.io.test_orc" time="0.000"><skipped message="collection skipped">('C:\\Users\\araba\\OneDrive\\Documents\\DZ\\python\\abc-2026\\Занятие от 30.09.2026\\Практическое задание №7\\task27\\.venv\\Lib\\site-packages\\pandas\\tests\\io\\test_orc.py', 15, "Skipped: could not import 'pyarrow.orc': No module named 'pyarrow'")</skipped></testcase><testcase classname="" name="tests.io.test_spss" time="0.000"><skipped message="collection skipped">('C:\\Users\\araba\\OneDrive\\Documents\\DZ\\python\\abc-2026\\Занятие от 30.09.2026\\Практическое задание №7\\task27\\.venv\\Lib\\site-packages\\pandas\\tests\\io\\test_spss.py', 9, "Skipped: could not import 'pyreadstat': No module named 'pyreadstat'")</skipped></testcase><testcase classname="" name="tests.io.test_util" time="0.000"><skipped message="collection skipped">('C:\\Users\\araba\\OneDrive\\Documents\\DZ\\python\\abc-2026\\Занятие от 30.09.2026\\Практическое задание №7\\task27\\.venv\\Lib\\site-packages\\pandas\\tests\\io\\test_util.py', 15, "Skipped: could not import 'pyarrow': No module named 'pyarrow'")</skipped></testcase><testcase classname="" name="tests.plotting.frame.test_frame" time="0.000"><skipped message="collection skipped">('C:\\Users\\araba\\OneDrive\\Documents\\DZ\\python\\abc-2026\\Занятие от 30.09.2026\\Практическое задание №7\\task27\\.venv\\Lib\\site-packages\\pandas\\tests\\plotting\\frame\\test_frame.py', 50, "Skipped: could not import 'matplotlib': No module named 'matplotlib'")</skipped></testcase><testcase classname="" name="tests.plotting.frame.test_frame_color" time="0.000"><skipped message="collection skipped">('C:\\Users\\araba\\OneDrive\\Documents\\DZ\\python\\abc-2026\\Занятие от 30.09.2026\\Практическое задание №7\\task27\\.venv\\Lib\\site-packages\\pandas\\tests\\plotting\\frame\\test_frame_color.py', 17, "Skipped: could not import 'matplotlib': No module named 'matplotlib'")</skipped></testcase><testcase classname="" name="tests.plotting.frame.test_frame_groupby" time="0.000"><skipped message="collection skipped">('C:\\Users\\araba\\OneDrive\\Documents\\DZ\\python\\abc-2026\\Занятие от 30.09.2026\\Практическое задание №7\\task27\\.venv\\Lib\\site-packages\\pandas\\tests\\plotting\\frame\\test_frame_groupby.py', 8, "Skipped: could not import 'matplotlib': No module named 'matplotlib'")</skipped></testcase><testcase classname="" name="tests.plotting.frame.test_frame_legend" time="0.000"><skipped message="collection skipped">('C:\\Users\\araba\\OneDrive\\Documents\\DZ\\python\\abc-2026\\Занятие от 30.09.2026\\Практическое задание №7\\task27\\.venv\\Lib\\site-packages\\pandas\\tests\\plotting\\frame\\test_frame_legend.py', 16, "Skipped: could not import 'matplotlib': No module named 'matplotlib'")</skipped></testcase><testcase classname="" name="tests.plotting.frame.test_frame_subplots" time="0.000"><skipped message="collection skipped">('C:\\Users\\araba\\OneDrive\\Documents\\DZ\\python\\abc-2026\\Занятие от 30.09.2026\\Практическое задание №7\\task27\\.venv\\Lib\\site-packages\\pandas\\tests\\plotting\\frame\\test_frame_subplots.py', 29, "Skipped: could not import 'matplotlib': No module named 'matplotlib'")</skipped></testcase><testcase classname="" name="tests.plotting.frame.test_hist_box_by" time="0.000"><skipped message="collection skipped">('C:\\Users\\araba\\OneDrive\\Documents\\DZ\\python\\abc-2026\\Занятие от 30.09.2026\\Практическое задание №7\\task27\\.venv\\Lib\\site-packages\\pandas\\tests\\plotting\\frame\\test_hist_box_by.py', 15, "Skipped: could not import 'matplotlib': No module named 'matplotlib'")</skipped></testcase><testcase classname="" name="tests.plotting.test_boxplot_method" time="0.000"><skipped message="collection skipped">('C:\\Users\\araba\\OneDrive\\Documents\\DZ\\python\\abc-2026\\Занятие от 30.09.2026\\Практическое задание №7\\task27\\.venv\\Lib\\site-packages\\pandas\\tests\\plotting\\test_boxplot_method.py', 31, "Skipped: could not import 'matplotlib': No module named 'matplotlib'")</skipped></testcase><testcase classname="" name="tests.plotting.test_common" time="0.000"><skipped message="collection skipped">('C:\\Users\\araba\\OneDrive\\Documents\\DZ\\python\\abc-2026\\Занятие от 30.09.2026\\Практическое задание №7\\task27\\.venv\\Lib\\site-packages\\pandas\\tests\\plotting\\test_common.py', 10, "Skipped: could not import 'matplotlib.pyplot': No module named 'matplotlib'")</skipped></testcase><testcase classname="" name="tests.plotting.test_converter" time="0.000"><skipped message="collection skipped">('C:\\Users\\araba\\OneDrive\\Documents\\DZ\\python\\abc-2026\\Занятие от 30.09.2026\\Практическое задание №7\\task27\\.venv\\Lib\\site-packages\\pandas\\tests\\plotting\\test_converter.py', 37, "Skipped: could not import 'matplotlib.pyplot': No module named 'matplotlib'")</skipped></testcase><testcase classname="" name="tests.plotting.test_datetimelike" time="0.000"><skipped message="collection skipped">('C:\\Users\\araba\\OneDrive\\Documents\\DZ\\python\\abc-2026\\Занятие от 30.09.2026\\Практическое задание №7\\task27\\.venv\\Lib\\site-packages\\pandas\\tests\\plotting\\test_datetimelike.py', 46, "Skipped: could not import 'matplotlib': No module named 'matplotlib'")</skipped></testcase><testcase classname="" name="tests.plotting.test_groupby" time="0.000"><skipped message="collection skipped">('C:\\Users\\araba\\OneDrive\\Documents\\DZ\\python\\abc-2026\\Занятие от 30.09.2026\\Практическое задание №7\\task27\\.venv\\Lib\\site-packages\\pandas\\tests\\plotting\\test_groupby.py', 16, "Skipped: could not import 'matplotlib': No module named 'matplotlib'")</skipped></testcase><testcase classname="" name="tests.plotting.test_hist_method" time="0.000"><skipped message="collection skipped">('C:\\Users\\araba\\OneDrive\\Documents\\DZ\\python\\abc-2026\\Занятие от 30.09.2026\\Практическое задание №7\\task27\\.venv\\Lib\\site-packages\\pandas\\tests\\plotting\\test_hist_method.py', 29, "Skipped: could not import 'matplotlib': No module named 'matplotlib'")</skipped></testcase><testcase classname="" name="tests.plotting.test_misc" time="0.000"><skipped message="collection skipped">('C:\\Users\\araba\\OneDrive\\Documents\\DZ\\python\\abc-2026\\Занятие от 30.09.2026\\Практическое задание №7\\task27\\.venv\\Lib\\site-packages\\pandas\\tests\\plotting\\test_misc.py', 30, "Skipped: could not import 'matplotlib': No module named 'matplotlib'")</skipped></testcase><testcase classname="" name="tests.plotting.test_series" time="0.000"><skipped message="collection skipped">('C:\\Users\\araba\\OneDrive\\Documents\\DZ\\python\\abc-2026\\Занятие от 30.09.2026\\Практическое задание №7\\task27\\.venv\\Lib\\site-packages\\pandas\\tests\\plotting\\test_series.py', 38, "Skipped: could not import 'matplotlib': No module named 'matplotlib'")</skipped></testcase><testcase classname="" name="tests.plotting.test_style" time="0.000"><skipped message="collection skipped">('C:\\Users\\araba\\OneDrive\\Documents\\DZ\\python\\abc-2026\\Занятие от 30.09.2026\\Практическое задание №7\\task27\\.venv\\Lib\\site-packages\\pandas\\tests\\plotting\\test_style.py', 5, "Skipped: could not import 'matplotlib': No module named 'matplotlib'")</skipped></testcase><testcase classname="tests.reshape.concat.test_append" name="TestAppend" time="0.000"><error message="collection failure">.venv\Lib\site-packages\pluggy\_caller.py:197: in __call__
+    return self._hookexec(
+.venv\Lib\site-packages\pluggy\_manager.py:183: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\_pytest\python.py:250: in pytest_pycollect_makeitem
+    return list(collector._genfunctions(name, obj))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\_pytest\python.py:476: in _genfunctions
+    self.ihook.pytest_generate_tests.call_extra(methods, dict(metafunc=metafunc))
+.venv\Lib\site-packages\pluggy\_caller.py:262: in call_extra
+    return self._hookexec(self.name, hookimpls, kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\pluggy\_manager.py:183: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\_pytest\python.py:124: in pytest_generate_tests
+    metafunc.parametrize(*marker.args, **marker.kwargs, _param_mark=marker)
+.venv\Lib\site-packages\_pytest\python.py:1316: in parametrize
+    argnames, parametersets = ParameterSet._for_parametrize(
+.venv\Lib\site-packages\_pytest\mark\structures.py:202: in _for_parametrize
+    warnings.warn(
+E   pytest.PytestRemovedIn10Warning: Passing a non-Collection iterable to parametrize is deprecated.
+E   Test: tests/reshape/concat/test_append.py::TestAppend::test_append_different_columns_types, argvalues type: combinations
+E   Please convert to a list or tuple.
+E   See https://docs.pytest.org/en/stable/deprecations.html#parametrize-iterators</error></testcase><testcase classname="" name="tests.series.accessors.test_list_accessor" time="0.000"><skipped message="collection skipped">('C:\\Users\\araba\\OneDrive\\Documents\\DZ\\python\\abc-2026\\Занятие от 30.09.2026\\Практическое задание №7\\task27\\.venv\\Lib\\site-packages\\pandas\\tests\\series\\accessors\\test_list_accessor.py', 11, "Skipped: could not import 'pyarrow': No module named 'pyarrow'")</skipped></testcase><testcase classname="" name="tests.series.accessors.test_struct_accessor" time="0.000"><skipped message="collection skipped">('C:\\Users\\araba\\OneDrive\\Documents\\DZ\\python\\abc-2026\\Занятие от 30.09.2026\\Практическое задание №7\\task27\\.venv\\Lib\\site-packages\\pandas\\tests\\series\\accessors\\test_struct_accessor.py', 13, "Skipped: could not import 'pyarrow': No module named 'pyarrow'")</skipped></testcase><testcase classname="tests.series.methods.test_convert_dtypes" name="TestSeriesConvertDtypes" time="0.000"><error message="collection failure">.venv\Lib\site-packages\pluggy\_caller.py:197: in __call__
+    return self._hookexec(
+.venv\Lib\site-packages\pluggy\_manager.py:183: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\_pytest\python.py:250: in pytest_pycollect_makeitem
+    return list(collector._genfunctions(name, obj))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\_pytest\python.py:476: in _genfunctions
+    self.ihook.pytest_generate_tests.call_extra(methods, dict(metafunc=metafunc))
+.venv\Lib\site-packages\pluggy\_caller.py:262: in call_extra
+    return self._hookexec(self.name, hookimpls, kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\pluggy\_manager.py:183: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\_pytest\python.py:124: in pytest_generate_tests
+    metafunc.parametrize(*marker.args, **marker.kwargs, _param_mark=marker)
+.venv\Lib\site-packages\_pytest\python.py:1316: in parametrize
+    argnames, parametersets = ParameterSet._for_parametrize(
+.venv\Lib\site-packages\_pytest\mark\structures.py:202: in _for_parametrize
+    warnings.warn(
+E   pytest.PytestRemovedIn10Warning: Passing a non-Collection iterable to parametrize is deprecated.
+E   Test: tests/series/methods/test_convert_dtypes.py::TestSeriesConvertDtypes::test_convert_dtypes, argvalues type: product
+E   Please convert to a list or tuple.
+E   See https://docs.pytest.org/en/stable/deprecations.html#parametrize-iterators</error></testcase><testcase classname="" name="tests.series.test_arrow_interface" time="0.000"><skipped message="collection skipped">('C:\\Users\\araba\\OneDrive\\Documents\\DZ\\python\\abc-2026\\Занятие от 30.09.2026\\Практическое задание №7\\task27\\.venv\\Lib\\site-packages\\pandas\\tests\\series\\test_arrow_interface.py', 10, "Skipped: could not import 'pyarrow': No module named 'pyarrow'")</skipped></testcase><testcase classname="" name="tests.tseries.offsets.test_dst" time="0.000"><skipped message="collection skipped">('C:\\Users\\araba\\OneDrive\\Documents\\DZ\\python\\abc-2026\\Занятие от 30.09.2026\\Практическое задание №7\\task27\\.venv\\Lib\\site-packages\\pandas\\tests\\tseries\\offsets\\test_dst.py', 36, "Skipped: could not import 'pytz': No module named 'pytz'")</skipped></testcase><testcase classname="tests.tseries.offsets.test_offsets" name="TestDateOffset" time="0.000"><error message="collection failure">.venv\Lib\site-packages\pluggy\_caller.py:197: in __call__
+    return self._hookexec(
+.venv\Lib\site-packages\pluggy\_manager.py:183: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\_pytest\python.py:250: in pytest_pycollect_makeitem
+    return list(collector._genfunctions(name, obj))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\_pytest\python.py:476: in _genfunctions
+    self.ihook.pytest_generate_tests.call_extra(methods, dict(metafunc=metafunc))
+.venv\Lib\site-packages\pluggy\_caller.py:262: in call_extra
+    return self._hookexec(self.name, hookimpls, kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\pluggy\_manager.py:183: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\_pytest\python.py:124: in pytest_generate_tests
+    metafunc.parametrize(*marker.args, **marker.kwargs, _param_mark=marker)
+.venv\Lib\site-packages\_pytest\python.py:1316: in parametrize
+    argnames, parametersets = ParameterSet._for_parametrize(
+.venv\Lib\site-packages\_pytest\mark\structures.py:202: in _for_parametrize
+    warnings.warn(
+E   pytest.PytestRemovedIn10Warning: Passing a non-Collection iterable to parametrize is deprecated.
+E   Test: tests/tseries/offsets/test_offsets.py::TestDateOffset::test_add, argvalues type: zip
+E   Please convert to a list or tuple.
+E   See https://docs.pytest.org/en/stable/deprecations.html#parametrize-iterators</error></testcase><testcase classname="" name="tests.window.test_numba" time="0.000"><skipped message="collection skipped">('C:\\Users\\araba\\OneDrive\\Documents\\DZ\\python\\abc-2026\\Занятие от 30.09.2026\\Практическое задание №7\\task27\\.venv\\Lib\\site-packages\\pandas\\tests\\window\\test_numba.py', 20, "Skipped: could not import 'numba': No module named 'numba'")</skipped></testcase><testcase classname="" name="tests.window.test_online" time="0.000"><skipped message="collection skipped">('C:\\Users\\araba\\OneDrive\\Documents\\DZ\\python\\abc-2026\\Занятие от 30.09.2026\\Практическое задание №7\\task27\\.venv\\Lib\\site-packages\\pandas\\tests\\window\\test_online.py', 15, "Skipped: could not import 'numba': No module named 'numba'")</skipped></testcase></testsuite></testsuites>

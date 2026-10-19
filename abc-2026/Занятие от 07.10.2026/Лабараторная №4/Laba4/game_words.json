@@ -1,0 +1,562 @@
+[
+  {
+    "word": "ANNOTATION",
+    "category": "Python",
+    "hint": "A label associated with a variable, a class\nattribute or a function parameter or return value,\nused by convention as a type hint . Annotations of local variables cannot be accessed at runtime, but\nannotations of global variables, class attributes, and functions\ncan be retrieved by calling annotationlib.get_annotations() on modules, classes, and functions, respectively. See variable annotation , function annotation , PEP 484 , PEP 526 , and PEP 649 , which describe this functionality.\nAlso see Annotations Best Practices for best practices on working with annotations.",
+    "source": "https://docs.python.org/3/glossary.html",
+    "used": false,
+    "guessed_count": 0
+  },
+  {
+    "word": "ARGUMENT",
+    "category": "Python",
+    "hint": "A value passed to a function (or method ) when calling the\nfunction.  There are two kinds of argument: keyword argument : an argument preceded by an identifier (e.g. name= ) in a function call or passed as a value in a dictionary\npreceded by ** .  For example, 3 and 5 are both keyword\narguments in the following calls to complex() : complex ( real = 3 , imag = 5 ) complex ( ** { 'real' : 3 , 'imag' : 5 }) positional argument : an argument that is not a keyword argument.\nPositional arguments can appear at the beginning of an argument list\nand/or be passed as elements of an iterable preceded by * .\nFor example, 3 and 5 are both positional arguments in the\nfollowing calls: complex ( 3 , 5 ) complex ( * ( 3 , 5 )) Arguments are assigned to the named local variables in a function body.\nSee the Calls section for the rules governing this assignment.\nSyntactically, any expression can be used to represent an argument; the\nevaluated value is assigned to the local variable. See also the parameter glossary entry, the FAQ question on the difference between arguments and parameters , and PEP 362 .",
+    "source": "https://docs.python.org/3/glossary.html",
+    "used": false,
+    "guessed_count": 0
+  },
+  {
+    "word": "ATTRIBUTE",
+    "category": "Python",
+    "hint": "A value associated with an object which is usually referenced by name\nusing dotted expressions.\nFor example, if an object o has an attribute a it would be referenced as o.a . It is possible to give an object an attribute whose name is not an\nidentifier as defined by Names (identifiers and keywords) , for example using setattr() , if the object allows it.\nSuch an attribute will not be accessible using a dotted expression,\nand would instead need to be retrieved with getattr() .",
+    "source": "https://docs.python.org/3/glossary.html",
+    "used": false,
+    "guessed_count": 0
+  },
+  {
+    "word": "AWAITABLE",
+    "category": "Python",
+    "hint": "An object that can be used in an await expression.  Can be\na coroutine or an object with an __await__() method.\nSee also PEP 492 .",
+    "source": "https://docs.python.org/3/glossary.html",
+    "used": false,
+    "guessed_count": 0
+  },
+  {
+    "word": "BDFL",
+    "category": "Python",
+    "hint": "Benevolent Dictator For Life, a.k.a. Guido van Rossum , Pythonâs creator.",
+    "source": "https://docs.python.org/3/glossary.html",
+    "used": false,
+    "guessed_count": 0
+  },
+  {
+    "word": "BYTECODE",
+    "category": "Python",
+    "hint": "Python source code is compiled into bytecode, the internal representation\nof a Python program in the CPython interpreter.  The bytecode is also\ncached in .pyc files so that executing the same file is\nfaster the second time (recompilation from source to bytecode can be\navoided).  This âintermediate languageâ is said to run on a virtual machine that executes the machine code corresponding to\neach bytecode. Do note that bytecodes are not expected to work between\ndifferent Python virtual machines, nor to be stable between Python\nreleases. A list of bytecode instructions can be found in the documentation for the dis module .",
+    "source": "https://docs.python.org/3/glossary.html",
+    "used": false,
+    "guessed_count": 0
+  },
+  {
+    "word": "CALLABLE",
+    "category": "Python",
+    "hint": "A callable is an object that can be called, possibly with a set\nof arguments (see argument ), with the following syntax: callable ( argument1 , argument2 , argumentN ) A function , and by extension a method , is a callable.\nAn instance of a class that implements the __call__() method is also a callable.",
+    "source": "https://docs.python.org/3/glossary.html",
+    "used": false,
+    "guessed_count": 0
+  },
+  {
+    "word": "CALLBACK",
+    "category": "Python",
+    "hint": "A subroutine function which is passed as an argument to be executed at\nsome point in the future.",
+    "source": "https://docs.python.org/3/glossary.html",
+    "used": false,
+    "guessed_count": 0
+  },
+  {
+    "word": "CLASS",
+    "category": "Python",
+    "hint": "A template for creating user-defined objects. Class definitions\nnormally contain method definitions which operate on instances of the\nclass.",
+    "source": "https://docs.python.org/3/glossary.html",
+    "used": false,
+    "guessed_count": 0
+  },
+  {
+    "word": "CONCURRENCY",
+    "category": "Python",
+    "hint": "The ability of a computer program to perform multiple tasks at the same\ntime.  Python provides libraries for writing programs that make use of\ndifferent forms of concurrency. asyncio is a library for dealing\nwith asynchronous tasks and coroutines. threading provides\naccess to operating system threads and multiprocessing to\noperating system processes. Multi-core processors can execute threads and\nprocesses on different CPU cores at the same time (see parallelism ).",
+    "source": "https://docs.python.org/3/glossary.html",
+    "used": false,
+    "guessed_count": 0
+  },
+  {
+    "word": "CONTEXT",
+    "category": "Python",
+    "hint": "This term has different meanings depending on where and how it is used.\nSome common meanings: The temporary state or environment established by a context\nmanager via a with statement. The collection of keyÂ­value bindings associated with a particular contextvars.Context object and accessed via ContextVar objects.  Also see context\nvariable . A contextvars.Context object.  Also see current\ncontext .",
+    "source": "https://docs.python.org/3/glossary.html",
+    "used": false,
+    "guessed_count": 0
+  },
+  {
+    "word": "CONTIGUOUS",
+    "category": "Python",
+    "hint": "A buffer is considered contiguous exactly if it is either C-contiguous or Fortran contiguous .  Zero-dimensional buffers are\nC and Fortran contiguous.  In one-dimensional arrays, the items\nmust be laid out in memory next to each other, in order of\nincreasing indexes starting from zero.  In multidimensional\nC-contiguous arrays, the last index varies the fastest when\nvisiting items in order of memory address.  However, in\nFortran contiguous arrays, the first index varies the fastest.",
+    "source": "https://docs.python.org/3/glossary.html",
+    "used": false,
+    "guessed_count": 0
+  },
+  {
+    "word": "COROUTINE",
+    "category": "Python",
+    "hint": "Coroutines are a more generalized form of subroutines. Subroutines are\nentered at one point and exited at another point.  Coroutines can be\nentered, exited, and resumed at many different points.  They can be\nimplemented with the async def statement.  See also PEP 492 .",
+    "source": "https://docs.python.org/3/glossary.html",
+    "used": false,
+    "guessed_count": 0
+  },
+  {
+    "word": "CPYTHON",
+    "category": "Python",
+    "hint": "The canonical implementation of the Python programming language, as\ndistributed on python.org .  The term âCPythonâ\nis used when necessary to distinguish this implementation from others\nsuch as Jython or IronPython.",
+    "source": "https://docs.python.org/3/glossary.html",
+    "used": false,
+    "guessed_count": 0
+  },
+  {
+    "word": "DEADLOCK",
+    "category": "Python",
+    "hint": "A situation in which two or more tasks (threads, processes, or coroutines)\nwait indefinitely for each other to release resources or complete actions,\npreventing any from making progress.  For example, if thread A holds lock\n1 and waits for lock 2, while thread B holds lock 2 and waits for lock 1,\nboth threads will wait indefinitely.  In Python this often arises from\nacquiring multiple locks in conflicting orders or from circular\njoin/await dependencies.  Deadlocks can be avoided by always acquiring\nmultiple locks in a consistent order.  See also lock and reentrant .",
+    "source": "https://docs.python.org/3/glossary.html",
+    "used": false,
+    "guessed_count": 0
+  },
+  {
+    "word": "DECORATOR",
+    "category": "Python",
+    "hint": "A function returning another function, usually applied as a function\ntransformation using the @wrapper syntax.  Common examples for\ndecorators are @classmethod and @staticmethod . The decorator syntax is merely syntactic sugar, the following two\nfunction definitions are semantically equivalent: def f ( arg ): ... f = staticmethod ( f ) @staticmethod def f ( arg ): ... The same concept exists for classes, but is less commonly used there.  See\nthe documentation for function definitions and class definitions for more about decorators.",
+    "source": "https://docs.python.org/3/glossary.html",
+    "used": false,
+    "guessed_count": 0
+  },
+  {
+    "word": "DESCRIPTOR",
+    "category": "Python",
+    "hint": "Any object which defines the methods __get__() , __set__() , or __delete__() .\nWhen a class attribute is a descriptor, its special\nbinding behavior is triggered upon attribute lookup.  Normally, using a.b to get, set or delete an attribute looks up the object named b in\nthe class dictionary for a , but if b is a descriptor, the respective\ndescriptor method gets called.  Understanding descriptors is a key to a\ndeep understanding of Python because they are the basis for many features\nincluding functions, methods, properties, class methods, static methods,\nand reference to super classes. For more information about descriptorsâ methods, see Implementing Descriptors or the Descriptor How To Guide .",
+    "source": "https://docs.python.org/3/glossary.html",
+    "used": false,
+    "guessed_count": 0
+  },
+  {
+    "word": "DICTIONARY",
+    "category": "Python",
+    "hint": "An associative array, where arbitrary keys are mapped to values.  The\nkeys can be any object with __hash__() and __eq__() methods.\nCalled a hash in Perl.",
+    "source": "https://docs.python.org/3/glossary.html",
+    "used": false,
+    "guessed_count": 0
+  },
+  {
+    "word": "DOCSTRING",
+    "category": "Python",
+    "hint": "A string literal which appears as the first expression in a class,\nfunction or module.  While ignored when the suite is executed, it is\nrecognized by the compiler and put into the __doc__ attribute\nof the enclosing class, function or module.  Since it is available via\nintrospection, it is the canonical place for documentation of the\nobject.",
+    "source": "https://docs.python.org/3/glossary.html",
+    "used": false,
+    "guessed_count": 0
+  },
+  {
+    "word": "DUNDER",
+    "category": "Python",
+    "hint": "An informal short-hand for âdouble underscoreâ, used when talking about a special method . For example, __init__ is often pronounced\nâdunder initâ.",
+    "source": "https://docs.python.org/3/glossary.html",
+    "used": false,
+    "guessed_count": 0
+  },
+  {
+    "word": "EAFP",
+    "category": "Python",
+    "hint": "Easier to ask for forgiveness than permission.  This common Python coding\nstyle assumes the existence of valid keys or attributes and catches\nexceptions if the assumption proves false.  This clean and fast style is\ncharacterized by the presence of many try and except statements.  The technique contrasts with the LBYL style\ncommon to many other languages such as C.",
+    "source": "https://docs.python.org/3/glossary.html",
+    "used": false,
+    "guessed_count": 0
+  },
+  {
+    "word": "EXHAUSTED",
+    "category": "Python",
+    "hint": "An iterator that has produced all of its values is said to be exhausted .\nFurther attempts to get the next value (for example, calls to next() ) raise StopIteration (or StopAsyncIteration in the case of an asynchronous\niterator ).",
+    "source": "https://docs.python.org/3/glossary.html",
+    "used": false,
+    "guessed_count": 0
+  },
+  {
+    "word": "EXPRESSION",
+    "category": "Python",
+    "hint": "A piece of syntax which can be evaluated to some value.  In other words,\nan expression is an accumulation of expression elements like literals,\nnames, attribute access, operators or function calls which all return a\nvalue.  Not all language constructs\nare expressions.  There are also statement s which cannot be used\nas expressions, such as while .  Assignments are also statements,\nnot expressions.",
+    "source": "https://docs.python.org/3/glossary.html",
+    "used": false,
+    "guessed_count": 0
+  },
+  {
+    "word": "FINDER",
+    "category": "Python",
+    "hint": "An object that tries to find the loader for a module that is\nbeing imported. There are two types of finder: meta path finders for use with sys.meta_path , and path\nentry finders for use with sys.path_hooks . See Finders and loaders and importlib for much more detail.",
+    "source": "https://docs.python.org/3/glossary.html",
+    "used": false,
+    "guessed_count": 0
+  },
+  {
+    "word": "FUNCTION",
+    "category": "Python",
+    "hint": "A series of statements which returns some value to a caller. It can also\nbe passed zero or more arguments which may be used in\nthe execution of the body. See also parameter , method ,\nand the Function definitions section.",
+    "source": "https://docs.python.org/3/glossary.html",
+    "used": false,
+    "guessed_count": 0
+  },
+  {
+    "word": "__FUTURE__",
+    "category": "Python",
+    "hint": "A future statement , from __future__ import <feature> ,\ndirects the compiler to compile the current module using syntax or\nsemantics that will become standard in a future release of Python.\nThe __future__ module documents the possible values of feature .  By importing this module and evaluating its variables,\nyou can see when a new feature was first added to the language and\nwhen it will (or did) become the default: >>> import __future__ >>> __future__ . division _Feature((2, 2, 0, 'alpha', 2), (3, 0, 0, 'alpha', 0), 8192)",
+    "source": "https://docs.python.org/3/glossary.html",
+    "used": false,
+    "guessed_count": 0
+  },
+  {
+    "word": "GENERATOR",
+    "category": "Python",
+    "hint": "Informally used to mean either a generator function or a generator iterator , depending on context.  The formal terms generator function and generator iterator are uncommon\nin practice; âgeneratorâ alone is almost always sufficient.",
+    "source": "https://docs.python.org/3/glossary.html",
+    "used": false,
+    "guessed_count": 0
+  },
+  {
+    "word": "GIL",
+    "category": "Python",
+    "hint": "See global interpreter lock .",
+    "source": "https://docs.python.org/3/glossary.html",
+    "used": false,
+    "guessed_count": 0
+  },
+  {
+    "word": "HASHABLE",
+    "category": "Python",
+    "hint": "An object is hashable if it has a hash value which never changes during\nits lifetime (it needs a __hash__() method), and can be\ncompared to other objects (it needs an __eq__() method).\nHashable objects which\ncompare equal must have the same hash value. Hashability makes an object usable as a dictionary key and a set member,\nbecause these data structures use the hash value internally. Most of Pythonâs immutable built-in objects are hashable; mutable\ncontainers (such as lists or dictionaries) are not; immutable\ncontainers (such as tuples and frozensets) are only hashable if\ntheir elements are hashable.  Objects which are\ninstances of user-defined classes are hashable by default.  They all\ncompare unequal (except with themselves), and their hash value is derived\nfrom their id() .",
+    "source": "https://docs.python.org/3/glossary.html",
+    "used": false,
+    "guessed_count": 0
+  },
+  {
+    "word": "IDLE",
+    "category": "Python",
+    "hint": "An Integrated Development and Learning Environment for Python. IDLE â Python editor and shell is a basic editor and interpreter environment\nwhich ships with the standard distribution of Python.",
+    "source": "https://docs.python.org/3/glossary.html",
+    "used": false,
+    "guessed_count": 0
+  },
+  {
+    "word": "IMMORTAL",
+    "category": "Python",
+    "hint": "Immortal objects are a CPython implementation detail introduced\nin PEP 683 . If an object is immortal, its reference count is never modified,\nand therefore it is never deallocated while the interpreter is running.\nFor example, True and None are immortal in CPython. Immortal objects can be identified via sys._is_immortal() , or\nvia PyUnstable_IsImmortal() in the C API.",
+    "source": "https://docs.python.org/3/glossary.html",
+    "used": false,
+    "guessed_count": 0
+  },
+  {
+    "word": "IMMUTABLE",
+    "category": "Python",
+    "hint": "An object with a fixed value.  Immutable objects include numbers, strings and\ntuples.  Such an object cannot be altered.  A new object has to\nbe created if a different value has to be stored.  They play an important\nrole in places where a constant hash value is needed, for example as a key\nin a dictionary.  Immutable objects are inherently thread-safe because their state cannot be modified after creation, eliminating concerns\nabout improperly synchronized concurrent modification .",
+    "source": "https://docs.python.org/3/glossary.html",
+    "used": false,
+    "guessed_count": 0
+  },
+  {
+    "word": "IMPORTING",
+    "category": "Python",
+    "hint": "The process by which Python code in one module is made available to\nPython code in another module.",
+    "source": "https://docs.python.org/3/glossary.html",
+    "used": false,
+    "guessed_count": 0
+  },
+  {
+    "word": "IMPORTER",
+    "category": "Python",
+    "hint": "An object that both finds and loads a module; both a finder and loader object.",
+    "source": "https://docs.python.org/3/glossary.html",
+    "used": false,
+    "guessed_count": 0
+  },
+  {
+    "word": "INDEX",
+    "category": "Python",
+    "hint": "A numeric value that represents the position of an element in\na sequence . In Python, indexing starts at zero.\nFor example, things[0] names the first element of things ; things[1] names the second one. In some contexts, Python allows negative indexes for counting from the\nend of a sequence, and indexing using slices . See also subscript .",
+    "source": "https://docs.python.org/3/glossary.html",
+    "used": false,
+    "guessed_count": 0
+  },
+  {
+    "word": "INTERACTIVE",
+    "category": "Python",
+    "hint": "Python has an interactive interpreter which means you can enter\nstatements and expressions at the interpreter prompt, immediately\nexecute them and see their results.  Just launch python with no\narguments (possibly by selecting it from your computerâs main\nmenu). It is a very powerful way to test out new ideas or inspect\nmodules and packages (remember help(x) ). For more on interactive\nmode, see Interactive Mode .",
+    "source": "https://docs.python.org/3/glossary.html",
+    "used": false,
+    "guessed_count": 0
+  },
+  {
+    "word": "INTERPRETED",
+    "category": "Python",
+    "hint": "Python is an interpreted language, as opposed to a compiled one,\nthough the distinction can be blurry because of the presence of the\nbytecode compiler.  This means that source files can be run directly\nwithout explicitly creating an executable which is then run.\nInterpreted languages typically have a shorter development/debug cycle\nthan compiled ones, though their programs generally also run more\nslowly.  See also interactive .",
+    "source": "https://docs.python.org/3/glossary.html",
+    "used": false,
+    "guessed_count": 0
+  },
+  {
+    "word": "ITERABLE",
+    "category": "Python",
+    "hint": "An object capable of returning its members one at a time. Examples of\niterables include all sequence types (such as list , str ,\nand tuple ) and some non-sequence types like dict , file objects , and objects of any classes you define\nwith an __iter__() method or with a __getitem__() method\nthat implements sequence semantics. Iterables can be\nused in a for loop and in many other places where a sequence is\nneeded ( zip() , map() , â¦).  When an iterable object is passed\nas an argument to the built-in function iter() , it returns an\niterator for the object.  This iterator is good for one pass over the set\nof values.  When using iterables, it is usually not necessary to call iter() or deal with iterator objects yourself.  The for statement does that automatically for you, creating a temporary unnamed\nvariable to hold the iterator for the duration of the loop.  See also iterator , sequence , and generator .",
+    "source": "https://docs.python.org/3/glossary.html",
+    "used": false,
+    "guessed_count": 0
+  },
+  {
+    "word": "ITERATOR",
+    "category": "Python",
+    "hint": "An object representing a stream of data.  Repeated calls to the iteratorâs __next__() method (or passing it to the built-in function next() ) return successive items in the stream.  When no more data\nare available a StopIteration exception is raised instead.  At this\npoint, the iterator object is exhausted and any further calls to its __next__() method just raise StopIteration again.  Iterators\nare required to have an __iter__() method that returns the iterator\nobject itself so every iterator is also iterable and may be used in most\nplaces where other iterables are accepted.  One notable exception is code\nwhich attempts multiple iteration passes.  A container object (such as a list ) produces a fresh new iterator each time you pass it to the iter() function or use it in a for loop.  Attempting this\nwith an iterator will just return the same exhausted iterator object used\nin the previous iteration pass, making it appear like an empty container. More information can be found in Iteration-related types . CPython implementation detail: CPython does not consistently apply the requirement that an iterator\ndefine __iter__() .\nAnd also please note that free-threaded CPython does not guarantee thread-safe behavior of iterator\noperations.",
+    "source": "https://docs.python.org/3/glossary.html",
+    "used": false,
+    "guessed_count": 0
+  },
+  {
+    "word": "KEY",
+    "category": "Python",
+    "hint": "A value that identifies an entry in a mapping .\nSee also subscript .",
+    "source": "https://docs.python.org/3/glossary.html",
+    "used": false,
+    "guessed_count": 0
+  },
+  {
+    "word": "LAMBDA",
+    "category": "Python",
+    "hint": "An anonymous inline function consisting of a single expression which is evaluated when the function is called.  The syntax to create\na lambda function is lambda [parameters]: expression",
+    "source": "https://docs.python.org/3/glossary.html",
+    "used": false,
+    "guessed_count": 0
+  },
+  {
+    "word": "LBYL",
+    "category": "Python",
+    "hint": "Look before you leap.  This coding style explicitly tests for\npre-conditions before making calls or lookups.  This style contrasts with\nthe EAFP approach and is characterized by the presence of many if statements. In a multi-threaded environment, the LBYL approach can risk introducing a race condition between âthe lookingâ and âthe leapingâ.  For example,\nthe code, if key in mapping: return mapping[key] can fail if another\nthread removes key from mapping after the test, but before the lookup.\nThis issue can be solved with locks or by using the EAFP approach.  See also thread-safe .",
+    "source": "https://docs.python.org/3/glossary.html",
+    "used": false,
+    "guessed_count": 0
+  },
+  {
+    "word": "LIST",
+    "category": "Python",
+    "hint": "A built-in Python sequence .  Despite its name it is more akin\nto an array in other languages than to a linked list since access to\nelements is O (1).  See Time complexity of operations on built-in types .",
+    "source": "https://docs.python.org/3/glossary.html",
+    "used": false,
+    "guessed_count": 0
+  },
+  {
+    "word": "LOCK",
+    "category": "Python",
+    "hint": "A synchronization primitive that allows only one thread at a\ntime to access a shared resource.  A thread must acquire a lock before\naccessing the protected resource and release it afterward.  If a thread\nattempts to acquire a lock that is already held by another thread, it\nwill block until the lock becomes available.  Pythonâs threading module provides Lock (a basic lock) and RLock (a reentrant lock).  Locks are used\nto prevent race conditions and ensure thread-safe access to shared data.  Alternative design patterns\nto locks exist such as queues, producer/consumer patterns, and\nthread-local state. See also deadlock , and reentrant .",
+    "source": "https://docs.python.org/3/glossary.html",
+    "used": false,
+    "guessed_count": 0
+  },
+  {
+    "word": "LOADER",
+    "category": "Python",
+    "hint": "An object that loads a module.\nIt must define the exec_module() and create_module() methods\nto implement the Loader interface.\nA loader is typically returned by a finder .\nSee also: Finders and loaders importlib.abc.Loader PEP 302",
+    "source": "https://docs.python.org/3/glossary.html",
+    "used": false,
+    "guessed_count": 0
+  },
+  {
+    "word": "MAPPING",
+    "category": "Python",
+    "hint": "A container object that supports arbitrary key lookups and implements the\nmethods specified in the collections.abc.Mapping or collections.abc.MutableMapping abstract base classes .  Examples\ninclude dict , collections.defaultdict , collections.OrderedDict and collections.Counter .",
+    "source": "https://docs.python.org/3/glossary.html",
+    "used": false,
+    "guessed_count": 0
+  },
+  {
+    "word": "METACLASS",
+    "category": "Python",
+    "hint": "The class of a class.  Class definitions create a class name, a class\ndictionary, and a list of base classes.  The metaclass is responsible for\ntaking those three arguments and creating the class.  Most object oriented\nprogramming languages provide a default implementation.  What makes Python\nspecial is that it is possible to create custom metaclasses.  Most users\nnever need this tool, but when the need arises, metaclasses can provide\npowerful, elegant solutions.  They have been used for logging attribute\naccess, adding thread-safety, tracking object creation, implementing\nsingletons, and many other tasks. More information can be found in Metaclasses .",
+    "source": "https://docs.python.org/3/glossary.html",
+    "used": false,
+    "guessed_count": 0
+  },
+  {
+    "word": "METHOD",
+    "category": "Python",
+    "hint": "A function which is defined inside a class body.  If called as an attribute\nof an instance of that class, the method will get the instance object as\nits first argument (which is usually called self ).\nSee function and nested scope .",
+    "source": "https://docs.python.org/3/glossary.html",
+    "used": false,
+    "guessed_count": 0
+  },
+  {
+    "word": "MODULE",
+    "category": "Python",
+    "hint": "An object that serves as an organizational unit of Python code.  Modules\nhave a namespace containing arbitrary Python objects.  Modules are loaded\ninto Python by the process of importing . See also package .",
+    "source": "https://docs.python.org/3/glossary.html",
+    "used": false,
+    "guessed_count": 0
+  },
+  {
+    "word": "MRO",
+    "category": "Python",
+    "hint": "See method resolution order .",
+    "source": "https://docs.python.org/3/glossary.html",
+    "used": false,
+    "guessed_count": 0
+  },
+  {
+    "word": "MUTABLE",
+    "category": "Python",
+    "hint": "An object with state that is allowed to change during the course\nof the program.  In multi-threaded programs, mutable objects that are\nshared between threads require careful synchronization to avoid race conditions .  See also immutable , thread-safe , and concurrent modification .",
+    "source": "https://docs.python.org/3/glossary.html",
+    "used": false,
+    "guessed_count": 0
+  },
+  {
+    "word": "NAMESPACE",
+    "category": "Python",
+    "hint": "The place where a variable is stored.  Namespaces are implemented as\ndictionaries.  There are the local, global and built-in namespaces as well\nas nested namespaces in objects (in methods).  Namespaces support\nmodularity by preventing naming conflicts.  For instance, the functions builtins.open and os.open() are distinguished by\ntheir namespaces.  Namespaces also aid readability and maintainability by\nmaking it clear which module implements a function.  For instance, writing random.seed() or itertools.islice() makes it clear that those\nfunctions are implemented by the random and itertools modules, respectively.",
+    "source": "https://docs.python.org/3/glossary.html",
+    "used": false,
+    "guessed_count": 0
+  },
+  {
+    "word": "OBJECT",
+    "category": "Python",
+    "hint": "Any data with state (attributes or value) and defined behavior\n(methods).  Also the ultimate base class of any new-style\nclass .",
+    "source": "https://docs.python.org/3/glossary.html",
+    "used": false,
+    "guessed_count": 0
+  },
+  {
+    "word": "PACKAGE",
+    "category": "Python",
+    "hint": "A Python module which can contain submodules or recursively,\nsubpackages.  Technically, a package is a Python module with a __path__ attribute. See also regular package and namespace package .",
+    "source": "https://docs.python.org/3/glossary.html",
+    "used": false,
+    "guessed_count": 0
+  },
+  {
+    "word": "PARALLELISM",
+    "category": "Python",
+    "hint": "Executing multiple operations at the same time (e.g. on multiple CPU\ncores).  In Python builds with the global interpreter lock (GIL) , only one\nthread runs Python bytecode at a time, so taking advantage of multiple\nCPU cores typically involves multiple processes\n(e.g. multiprocessing ) or native extensions that release the GIL.\nIn free-threaded Python, multiple Python threads\ncan run Python code simultaneously on different cores.",
+    "source": "https://docs.python.org/3/glossary.html",
+    "used": false,
+    "guessed_count": 0
+  },
+  {
+    "word": "PARAMETER",
+    "category": "Python",
+    "hint": "A named entity in a function (or method) definition that\nspecifies an argument (or in some cases, arguments) that the\nfunction can accept.  There are five kinds of parameter: positional-or-keyword : specifies an argument that can be passed\neither positionally or as a keyword argument .  This is the default kind of parameter, for example foo and bar in the following: def func ( foo , bar = None ): ... positional-only : specifies an argument that can be supplied only\nby position. Positional-only parameters can be defined by including a / character in the parameter list of the function definition after\nthem, for example posonly1 and posonly2 in the following: def func ( posonly1 , posonly2 , / , positional_or_keyword ): ... keyword-only : specifies an argument that can be supplied only\nby keyword.  Keyword-only parameters can be defined by including a\nsingle var-positional parameter or bare * in the parameter list\nof the function definition before them, for example kw_only1 and kw_only2 in the following: def func ( arg , * , kw_only1 , kw_only2 ): ... var-positional : specifies that an arbitrary sequence of\npositional arguments can be provided (in addition to any positional\narguments already accepted by other parameters).  Such a parameter can\nbe defined by prepending the parameter name with * , for example args in the following: def func ( * args , ** kwargs ): ... var-keyword : specifies that arbitrarily many keyword arguments\ncan be provided (in addition to any keyword arguments already accepted\nby other parameters).  Such a parameter can be defined by prepending\nthe parameter name with ** , for example kwargs in the example\nabove. Parameters can specify both optional and required arguments, as well as\ndefault values for some optional arguments. See also the argument glossary entry, the FAQ question on the difference between arguments and parameters , the inspect.Parameter class, the Function definitions section, and PEP 362 .",
+    "source": "https://docs.python.org/3/glossary.html",
+    "used": false,
+    "guessed_count": 0
+  },
+  {
+    "word": "PEP",
+    "category": "Python",
+    "hint": "Python Enhancement Proposal. A PEP is a design document\nproviding information to the Python community, or describing a new\nfeature for Python or its processes or environment. PEPs should\nprovide a concise technical specification and a rationale for proposed\nfeatures. PEPs are intended to be the primary mechanisms for proposing major new\nfeatures, for collecting community input on an issue, and for documenting\nthe design decisions that have gone into Python. The PEP author is\nresponsible for building consensus within the community and documenting\ndissenting opinions. See PEP 1 .",
+    "source": "https://docs.python.org/3/glossary.html",
+    "used": false,
+    "guessed_count": 0
+  },
+  {
+    "word": "PORTION",
+    "category": "Python",
+    "hint": "A set of files in a single directory (possibly stored in a zip file)\nthat contribute to a namespace package, as defined in PEP 420 .",
+    "source": "https://docs.python.org/3/glossary.html",
+    "used": false,
+    "guessed_count": 0
+  },
+  {
+    "word": "PYTHONIC",
+    "category": "Python",
+    "hint": "An idea or piece of code which closely follows the most common idioms\nof the Python language, rather than implementing code using concepts\ncommon to other languages.  For example, a common idiom in Python is\nto loop over all elements of an iterable using a for statement.  Many other languages donât have this type of construct, so\npeople unfamiliar with Python sometimes use a numerical counter instead: for i in range ( len ( food )): print ( food [ i ]) As opposed to the cleaner, Pythonic method: for piece in food : print ( piece )",
+    "source": "https://docs.python.org/3/glossary.html",
+    "used": false,
+    "guessed_count": 0
+  },
+  {
+    "word": "REENTRANT",
+    "category": "Python",
+    "hint": "A property of a function or lock that allows it to be called or\nacquired multiple times by the same thread without causing errors or a deadlock . For functions, reentrancy means the function can be safely called again\nbefore a previous invocation has completed, which is important when\nfunctions may be called recursively or from signal handlers. Thread-unsafe\nfunctions may be non-deterministic if theyâre called reentrantly in a\nmultithreaded program. For locks, Pythonâs threading.RLock (reentrant lock) is\nreentrant, meaning a thread that already holds the lock can acquire it\nagain without blocking.  In contrast, threading.Lock is not\nreentrant - attempting to acquire it twice from the same thread will cause\na deadlock. See also lock and deadlock .",
+    "source": "https://docs.python.org/3/glossary.html",
+    "used": false,
+    "guessed_count": 0
+  },
+  {
+    "word": "REPL",
+    "category": "Python",
+    "hint": "An acronym for the âreadâevalâprint loopâ, another name for the interactive interpreter shell.",
+    "source": "https://docs.python.org/3/glossary.html",
+    "used": false,
+    "guessed_count": 0
+  },
+  {
+    "word": "__SLOTS__",
+    "category": "Python",
+    "hint": "A declaration inside a class that saves memory by pre-declaring space for\ninstance attributes and eliminating instance dictionaries.  Though\npopular, the technique is somewhat tricky to get right and is best\nreserved for rare cases where there are large numbers of instances in a\nmemory-critical application.",
+    "source": "https://docs.python.org/3/glossary.html",
+    "used": false,
+    "guessed_count": 0
+  },
+  {
+    "word": "SEQUENCE",
+    "category": "Python",
+    "hint": "An iterable which supports efficient element access using integer\nindices via the __getitem__() special method and defines a __len__() method that returns the length of the sequence.\nSome built-in sequence types are list , str , tuple , and bytes . Note that dict also\nsupports __getitem__() and __len__() , but is considered a\nmapping rather than a sequence because the lookups use arbitrary hashable keys rather than integers. The collections.abc.Sequence abstract base class\ndefines a much richer interface that goes beyond just __getitem__() and __len__() , adding count() , index() , __contains__() , and __reversed__() .\nTypes that implement this expanded\ninterface can be registered explicitly using register() . For more documentation on sequence\nmethods generally, see Common Sequence Operations .",
+    "source": "https://docs.python.org/3/glossary.html",
+    "used": false,
+    "guessed_count": 0
+  },
+  {
+    "word": "SLICE",
+    "category": "Python",
+    "hint": "An object of type slice , used to describe a portion of\na sequence .\nA slice object is created when using the slicing form\nof subscript notation , with colons inside square\nbrackets, such as in variable_name[1:3:5] .",
+    "source": "https://docs.python.org/3/glossary.html",
+    "used": false,
+    "guessed_count": 0
+  },
+  {
+    "word": "STATEMENT",
+    "category": "Python",
+    "hint": "A statement is part of a suite (a âblockâ of code).  A statement is either\nan expression or one of several constructs with a keyword, such\nas if , while or for .",
+    "source": "https://docs.python.org/3/glossary.html",
+    "used": false,
+    "guessed_count": 0
+  },
+  {
+    "word": "STDLIB",
+    "category": "Python",
+    "hint": "An abbreviation of standard library .",
+    "source": "https://docs.python.org/3/glossary.html",
+    "used": false,
+    "guessed_count": 0
+  },
+  {
+    "word": "STEAL",
+    "category": "Python",
+    "hint": "In Pythonâs C API, â stealing â an argument means that ownership of the\nargument is transferred to the called function.\nThe caller must not use that reference after the call.\nGenerally, functions that âstealâ an argument do so even if they fail. See Reference Count Details for a full explanation.",
+    "source": "https://docs.python.org/3/glossary.html",
+    "used": false,
+    "guessed_count": 0
+  },
+  {
+    "word": "SUBSCRIPT",
+    "category": "Python",
+    "hint": "The expression in square brackets of a subscription expression , for example,\nthe 3 in items[3] .\nUsually used to select an element of a container.\nAlso called a key when subscripting a mapping ,\nor an index when subscripting a sequence .",
+    "source": "https://docs.python.org/3/glossary.html",
+    "used": false,
+    "guessed_count": 0
+  },
+  {
+    "word": "TOKEN",
+    "category": "Python",
+    "hint": "A small unit of source code, generated by the lexical analyzer (also called the tokenizer ).\nNames, numbers, strings, operators,\nnewlines and similar are represented by tokens. The tokenize module exposes Pythonâs lexical analyzer.\nThe token module contains information on the various types\nof tokens.",
+    "source": "https://docs.python.org/3/glossary.html",
+    "used": false,
+    "guessed_count": 0
+  },
+  {
+    "word": "TYPE",
+    "category": "Python",
+    "hint": "The type of a Python object determines what kind of object it is; every\nobject has a type.  An objectâs type is accessible as its __class__ attribute or can be retrieved with type(obj) .",
+    "source": "https://docs.python.org/3/glossary.html",
+    "used": false,
+    "guessed_count": 0
+  }
+]

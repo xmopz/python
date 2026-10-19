@@ -1,0 +1,33 @@
+
+class User:
+    def __init__(self, email, password):
+        self.email = email
+        self._password = hash(password)
+
+    @property
+    def email(self):
+        return self._email
+
+    @email.setter
+    def email(self, value):
+        if "@" not in value:
+            raise ValueError("Неверный email")
+        self._email = value
+
+    @property
+    def password(self):
+        raise AttributeError("Пароль нельзя прочитать")
+
+    @password.setter
+    def password(self, value):
+        self._password = hash(value)
+
+    def check_password(self, password):
+        return self._password == hash(password)
+
+
+user = User("test@example.com", "secret")
+
+print(user.email)
+print(user.check_password("secret"))
+print(user.check_password("wrong"))

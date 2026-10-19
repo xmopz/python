@@ -1,0 +1,95 @@
+import random
+from datetime import datetime
+from db import DICT_DEFENITION_WORD
+
+
+class Yakubovich:
+    def __init__(self):
+        self.name = input()
+        self.word = ""
+        self.mask = []
+        self.session = ""
+
+    def _generate_key(self):
+        return "lesson-session"
+
+    def print_menu(self):
+        print("1 — Новая партия")
+        print("2 — Загрузить партию")
+        print("3 — Выход")
+
+        choice = input()
+
+        if choice == "1":
+            self.start_game()
+        elif choice == "2":
+            self.load_game()
+        elif choice == "3":
+            self.end_game()
+
+    def start_game(self):
+        self.word = random.choice(list(DICT_DEFENITION_WORD.keys()))
+        self.mask = ["#"] * len(self.word)
+        self.session = self._generate_key()
+        self.play_game()
+
+    def play_game(self):
+        while "#" in self.mask:
+            letter = input()
+
+            if letter == "2":
+                self.save_game()
+            else:
+                for i in range(len(self.word)):
+                    if self.word[i] == letter:
+                        self.mask[i] = letter
+
+                print(self.mask)
+
+        self.end_game()
+
+    def save_game(self):
+        with open("save_game.csv", "a", encoding="utf-8") as file:
+            date = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            file.write(
+                f"{date}|{self.session}|{self.name}|"
+                f"{self.word}|{''.join(self.mask)}\n"
+            )
+
+    def load_game(self):
+        try:
+            with open("save_game.csv", "r", encoding="utf-8") as file:
+                lines = file.readlines()
+        except FileNotFoundError:
+            print("Сохранений нет")
+            return
+
+        saves = []
+
+        for i, line in enumerate(lines):
+            data = line.rstrip("\n").split("|")
+
+            if len(data) == 5 and data[2] == self.name:
+                saves.append((i, data))
+                print(i, data[3], data[4])
+
+        if not saves:
+            print("Сохранений нет")
+            return
+
+        number = int(input())
+
+        for i, data in saves:
+            if i == number:
+                self.session = data[1]
+                self.word = data[3]
+                self.mask = list(data[4])
+                self.play_game()
+                return
+
+    def end_game(self):
+        print("Игра завершена")
+
+
+game = Yakubovich()
+game.print_menu()

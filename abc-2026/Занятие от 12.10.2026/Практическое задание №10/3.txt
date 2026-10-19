@@ -1,0 +1,92 @@
+# Напишите решение
+
+from abc import ABC, abstractmethod
+import json
+import csv
+import io
+import xml.etree.ElementTree as ET
+from datetime import datetime
+
+
+class DataExporter(ABC):
+    @abstractmethod
+    def export(self, data):
+        pass
+
+    @abstractmethod
+    def get_format_name(self):
+        pass
+
+    def validate_data(self, data):
+        return bool(data)
+
+
+class JSONExporter(DataExporter):
+    def get_format_name(self):
+        return "JSON"
+
+    def export(self, data):
+        if not self.validate_data(data):
+            raise ValueError("Данные не могут быть пустыми")
+
+        timestamp = datetime.now().isoformat()
+
+        result = []
+        for item in data:
+            record = item.copy()
+            record["export_timestamp"] = timestamp
+            result.append(record)
+
+        print(json.dumps(result, ensure_ascii=False, indent=2))
+
+
+class CSVExporter(DataExporter):
+    def get_format_name(self):
+        return "CSV"
+
+    def export(self, data):
+        if not self.validate_data(data):
+            raise ValueError("Данные не могут быть пустыми")
+
+        output = io.StringIO()
+        writer = csv.DictWriter(output, fieldnames=data[0].keys())
+        writer.writeheader()
+        writer.writerows(data)
+
+        print(output.getvalue(), end="")
+
+
+class XMLExporter(DataExporter):
+    def get_format_name(self):
+        return "XML"
+
+    def export(self, data):
+        if not self.validate_data(data):
+            raise ValueError("Данные не могут быть пустыми")
+
+        root = ET.Element("report")
+
+        for record in data:
+            item = ET.SubElement(root, "item")
+
+            for key, value in record.items():
+                element = ET.SubElement(item, key)
+                element.text = str(value)
+
+        print(ET.tostring(root, encoding="unicode"))
+
+
+sales_data = [
+    {'product': 'Laptop', 'price': 1000, 'quantity': 2},
+    {'product': 'Mouse', 'price': 50, 'quantity': 10},
+]
+
+exporters = [
+    JSONExporter(),
+    CSVExporter(),
+    XMLExporter()
+]
+
+for exporter in exporters:
+    print(f"Формат: {exporter.get_format_name()}")
+    exporter.export(sales_data)

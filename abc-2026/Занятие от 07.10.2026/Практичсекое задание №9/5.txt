@@ -1,0 +1,52 @@
+
+class Product:
+    def __init__(self, name, price):
+        self.name = name
+        self.price = price
+
+    @property
+    def name(self):
+        return self._name
+
+    @name.setter
+    def name(self, value):
+        self._name = value
+
+    @property
+    def price(self):
+        return self._price
+
+    @price.setter
+    def price(self, value):
+        if value < 0:
+            value = 0
+        self._price = value
+
+
+class Order:
+    def __init__(self):
+        self.products = []
+
+    def add_product(self, product):
+        self.products.append(product)
+
+    def remove_product(self, product):
+        if product in self.products:
+            self.products.remove(product)
+
+    @property
+    def total_price(self):
+        total = 0
+        for product in self.products:
+            total += product.price
+        return total
+
+
+book = Product("Book", 10)
+pen = Product("Pen", 2)
+
+order = Order()
+order.add_product(book)
+order.add_product(pen)
+
+print(order.total_price)

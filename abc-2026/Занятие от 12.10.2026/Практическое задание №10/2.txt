@@ -1,0 +1,40 @@
+
+class NotificationSender:
+    def send(self, message, user):
+        pass
+
+
+class EmailSender(NotificationSender):
+    def send(self, message, user):
+        print(f"Email для {user.name} | Образовательная платформа | {message}")
+
+
+class SMSSender(NotificationSender):
+    def send(self, message, user):
+        print(f"SMS для {user.name} | {message[:50]}")
+
+
+class PushSender(NotificationSender):
+    def send(self, message, user):
+        print(f"Push для {user.name} | 🎓 {message}")
+
+
+class User:
+    def __init__(self, name, preferred_notifications):
+        self.name = name
+        self.preferred_notifications = preferred_notifications
+
+
+def notify_user(user, message):
+    for sender in user.preferred_notifications:
+        sender.send(message, user)
+
+
+email = EmailSender()
+push = PushSender()
+
+user = User("Мария", [email, push])
+
+message = "Блок аналитики начинается с 27 октября!"
+
+notify_user(user, message)

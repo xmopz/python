@@ -1,0 +1,9 @@
+Содержимое файла .dockerignore
+__pycache__/
+*.pyc
+.env
+.git/
+.venv/
+venv/
+*.md
+.pytest_cache/
